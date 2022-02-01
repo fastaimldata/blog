@@ -4,19 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Search | iamthedataguy</title>
+<title>Fairness in Machine Learning | iamthedataguy</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="Fairness in Machine Learning" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Blog of iamthedataguy." />
-<meta property="og:description" content="Blog of iamthedataguy." />
-<link rel="canonical" href="https://fastaimldata.github.io/blog/search/" />
-<meta property="og:url" content="https://fastaimldata.github.io/blog/search/" />
+<meta name="description" content="Concepts and learning resources for fairness in machine learning" />
+<meta property="og:description" content="Concepts and learning resources for fairness in machine learning" />
+<link rel="canonical" href="https://fastaimldata.github.io/blog/machine%20learning/2022/01/22/fainess-in-machine-learning.html" />
+<meta property="og:url" content="https://fastaimldata.github.io/blog/machine%20learning/2022/01/22/fainess-in-machine-learning.html" />
 <meta property="og:site_name" content="iamthedataguy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-22T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Search" />
+<meta property="twitter:title" content="Fairness in Machine Learning" />
 <script type="application/ld+json">
-{"url":"https://fastaimldata.github.io/blog/search/","@type":"WebPage","headline":"Search","description":"Blog of iamthedataguy.","@context":"https://schema.org"}</script>
+{"url":"https://fastaimldata.github.io/blog/machine%20learning/2022/01/22/fainess-in-machine-learning.html","@type":"BlogPosting","headline":"Fairness in Machine Learning","dateModified":"2022-01-22T00:00:00-06:00","datePublished":"2022-01-22T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://fastaimldata.github.io/blog/machine%20learning/2022/01/22/fainess-in-machine-learning.html"},"description":"Concepts and learning resources for fairness in machine learning","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://fastaimldata.github.io/blog/feed.xml" title="iamthedataguy" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -68,17 +70,93 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/blog/assets/js/search.js"></script>
-<script type="text/javascript" src="/blog/assets/js/vendor/lunr.min.js"></script>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search iamthedataguy" aria-label="Search iamthedataguy" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fairness in Machine Learning</h1><p class="page-description">Concepts and learning resources for fairness in machine learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-22T00:00:00-06:00" itemprop="datePublished">
+        Jan 22, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Machine Learning">Machine Learning</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#objectives">Objectives</a></li>
+<li class="toc-entry toc-h2"><a href="#concepts">Concepts</a></li>
+<li class="toc-entry toc-h2"><a href="#resources">Resources</a></li>
+</ul><h2 id="objectives">
+<a class="anchor" href="#objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objectives</h2>
+
+<p>The objective of this post is two-fold:</p>
+
+<ol>
+  <li>
+    <p>Concept Explanations - I wish to explain the main concepts in fairness in very simple and practical terms. For the technically inclined, I would like to provide some depth using mathematics borrowed from <a href="http://papers.nips.cc/paper/6374-interaction-screening-efficient-and-sample-optimal-learning-of-ising-models">Moritz Hardt et al., 2016</a></p>
+  </li>
+  <li>
+    <p>Learning materials - Record here all the resources which I found useful while delving on the topic of fairness in machine learning</p>
+  </li>
+</ol>
+
+<h2 id="concepts">
+<a class="anchor" href="#concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts</h2>
+
+<ol>
+  <li>
+    <p>Sensitive attributes</p>
+  </li>
+  <li>
+    <p>Demographic parity</p>
+  </li>
+  <li>
+    <p>Equal odds</p>
+  </li>
+  <li>
+    <p>Equal opportunity</p>
+  </li>
+  <li>
+    <p>Fairness through Awareness</p>
+  </li>
+</ol>
+
+<h2 id="resources">
+<a class="anchor" href="#resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h2>
+
+<ol>
+  <li>
+    <p><a href="http://research.google.com/bigpicture/attacking-discrimination-in-ml/">Attacking discrimination in ML</a></p>
+  </li>
+  <li>
+    <p><a href="https://ai.googleblog.com/2016/10/equality-of-opportunity-in-machine.html">Equality of opportunity in ML</a></p>
+  </li>
+  <li>
+    <p><a href="https://courses.cs.duke.edu//fall18/compsci590.1/lectures/FairML2.pdf">Duke slides</a></p>
+  </li>
+  <li>
+    <p><a href="https://fairmlbook.org/">Fair ML book</a></p>
+  </li>
+  <li>
+    <p><a href="http://papers.nips.cc/paper/6374-interaction-screening-efficient-and-sample-optimal-learning-of-ising-models">Moritz Hardt et al., Equality of opportunity in supervised learning</a></p>
+  </li>
+</ol>
+
+  </div><a class="u-url" href="/blog/machine%20learning/2022/01/22/fainess-in-machine-learning.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

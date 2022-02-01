@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Data Engineering Bootcamp Weeks 1-2 (Ongoing) | iamthedataguy</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Engineering Bootcamp Weeks 1-2 (Ongoing)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learning journey for Data Engineering Zoomcamp" />
+<meta property="og:description" content="Learning journey for Data Engineering Zoomcamp" />
+<link rel="canonical" href="https://fastaimldata.github.io/blog/courses/data%20engineering/2022/01/29/data-engineering-zoomcamp.html" />
+<meta property="og:url" content="https://fastaimldata.github.io/blog/courses/data%20engineering/2022/01/29/data-engineering-zoomcamp.html" />
+<meta property="og:site_name" content="iamthedataguy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-29T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Engineering Bootcamp Weeks 1-2 (Ongoing)" />
+<script type="application/ld+json">
+{"url":"https://fastaimldata.github.io/blog/courses/data%20engineering/2022/01/29/data-engineering-zoomcamp.html","@type":"BlogPosting","headline":"Data Engineering Bootcamp Weeks 1-2 (Ongoing)","dateModified":"2022-01-29T00:00:00-06:00","datePublished":"2022-01-29T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://fastaimldata.github.io/blog/courses/data%20engineering/2022/01/29/data-engineering-zoomcamp.html"},"description":"Learning journey for Data Engineering Zoomcamp","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://fastaimldata.github.io/blog/feed.xml" title="iamthedataguy" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">iamthedataguy</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Engineering Bootcamp Weeks 1-2 (Ongoing)</h1><p class="page-description">Learning journey for Data Engineering Zoomcamp</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-29T00:00:00-06:00" itemprop="datePublished">
+        Jan 29, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      11 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Courses">Courses</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#Data Engineering">Data Engineering</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#data-engineering-weeks-1-2-ongoing">Data Engineering Weeks 1-2 (Ongoing)</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#week-1---docker">Week 1 - Docker</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#setup-containerized-postgres-with-persistence-on-local-disk">Setup containerized postgres with persistence on local disk</a></li>
+<li class="toc-entry toc-h3"><a href="#containerize-python-application">Containerize python application</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#week-2---terraform-and-gcp">Week 2 - Terraform and GCP</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#terraform">Terraform</a></li>
+<li class="toc-entry toc-h3"><a href="#gcp">GCP</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#data-warehouse-vs-data-lake">Data Warehouse vs Data Lake</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#provision-datalake-and-datawarehousing-with-terraform-on-google-cloud-platform">Provision datalake and datawarehousing with Terraform on Google Cloud Platform</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="data-engineering-weeks-1-2-ongoing">
+<a class="anchor" href="#data-engineering-weeks-1-2-ongoing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Engineering Weeks 1-2 (Ongoing)</h1>
+
+<p>The objective of this post is to document my learning journey while taking the data engineering zoomcamp. I use Windows+WSL for Linux support. I will defer from posting installation related issues here, unless it seems helpful either for reference in the future or to the other course takers.</p>
+
+<p><strong>Notes for other learners</strong></p>
+<ul>
+  <li>If you are taking the data engineering zoomcamp, please follow the course at the <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">official zoomcamp repository</a>. The course creators have done a nice job in compiling this step by step.</li>
+  <li>Please use the notes here only as a complementary or additional resource</li>
+  <li>You can ask questions in the channel <code class="language-plaintext highlighter-rouge">#course-data-engineering</code> in <a href="https://datatalks.club">DataTalks.Club</a>
+</li>
+  <li>This is an innovative and community based live course provided by some kind-hearted people for free. A good way to contribute back is to document the issues you face on the <a href="https://docs.google.com/document/d/19bnYs80DwuUimHM65UV3sylsCn2j1vziPOwzBwQrebw/edit?usp=sharing">official FAQ page</a>
+</li>
+</ul>
+
+<h2 id="week-1---docker">
+<a class="anchor" href="#week-1---docker" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 1 - Docker</h2>
+
+<p><strong>Docker</strong> is a to package applications into containers which can
+be deployed/shipped anywhere. Docker achieves this through OS virtualization technology. Each docker container has its own OS, libraries and configuration files in an isolated space. But docker containers can colloborate with each other though channels. Let us say we have built a python application which runs on our local windows machine. If we <strong>containerize</strong> this application, then we can take the exact same container and make it run on another machine running another OS and on the cloud. I have already used a fair amount of docker. Therefore, it was easy to pick up.</p>
+
+<blockquote>
+  <p>In this course, docker is chosen so that the <em>data pipeline</em> we are going to develop can be containerized. Then, this containerized pipeline can be deployed on the cloud with services like AWS Batch or Kubernetes jobs. The Spark and Serverless Technologies(AWS Lambda, Google Functions) explored in this course are all containerized.</p>
+</blockquote>
+
+<p>The following exercises were performed hands-on during this week</p>
+
+<h3 id="setup-containerized-postgres-with-persistence-on-local-disk">
+<a class="anchor" href="#setup-containerized-postgres-with-persistence-on-local-disk" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Setup containerized <code class="language-plaintext highlighter-rouge">postgres</code> with persistence on local disk</strong>
+</h3>
+
+<p>We will later ingest New York taxis dataset into a postgres database. For persistence, I mapped an empty local folder <code class="language-plaintext highlighter-rouge">ny_taxi_postgres_data</code> to <code class="language-plaintext highlighter-rouge">/var/lib/postgresql/data</code> and this
+ran into permission issues because the released postgres container has only user “postgres”. I tried some suggested workarounds and finally settled on this one - we can create a local docker volume and map it to postgres data folder to avoid the permissions issue.</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker volume create --name dtc_postgres_volume_local -d local</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v dtc_postgres_volume_local:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:13
+</code></pre></div></div>
+
+<h3 id="containerize-python-application">
+<a class="anchor" href="#containerize-python-application" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Containerize python application</strong>
+</h3>
+<p>I built a simple docker image of a python application which uses pandas.</p>
+
+<blockquote>
+  <p>In fact, we can collect all python requirements into a <code class="language-plaintext highlighter-rouge">requirements.txt</code> file which can be used by <code class="language-plaintext highlighter-rouge">pip</code> on the container to prepare python environments in a clean way.</p>
+</blockquote>
+
+<h2 id="week-2---terraform-and-gcp">
+<a class="anchor" href="#week-2---terraform-and-gcp" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 2 - Terraform and GCP</h2>
+
+<h3 id="terraform">
+<a class="anchor" href="#terraform" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terraform</h3>
+<ol>
+  <li>
+    <p>Terraform is an open source tool which allows to handle “Infrastructure-as-Code”. For real beginners, By infrastructure, we mean not only computing infratructure (AWS EC2, Google Cloud machines) but also other <strong>resources</strong> like databases. If this does not make sense to you, please read <a href="https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code?in=terraform/docker-get-started">this page</a></p>
+  </li>
+  <li>
+    <p>Where? Terraform allows to provision infrastructure locally or on the cloud with various cloud providers like AWS, GCP etc. This provisioning of infrastructure can be done for testing, production etc. In Terraform, <strong>Providers</strong> are plugins that implement resource types. Docker, AWS, Google Cloud, Alibaba Cloud are all providers.</p>
+  </li>
+  <li>
+    <p>How? Using <strong>configuration files</strong> which are source-controlled. This approach helps to keep track of what infrastructure we used for which purpose in a clean and efficient manner. Moreover, Hashicorp, the company behind Terraform provides us with small, reusable Terraform configurations called <strong>Modules</strong>. We can use these to manage a group of related resources as if they were a single resource.</p>
+  </li>
+</ol>
+
+<p><em>I recommend doing the official <a href="">Terraform docker Interactive Lab</a> in which terraform uses docker as a provider. The resources provided are a docker image and docker container. No installations are required to follow this lab.</em></p>
+
+<h3 id="gcp">
+<a class="anchor" href="#gcp" aria-hidden="true"><span class="octicon octicon-link"></span></a>GCP</h3>
+<p>This course introduces GCP as a provider which will provide us with the following 2 resources:</p>
+<ol>
+  <li>Data Lake - Google Cloud Storage(or GCS)</li>
+  <li>Data Warehouse - BigQuery</li>
+</ol>
+
+<h4 id="data-warehouse-vs-data-lake">
+<a class="anchor" href="#data-warehouse-vs-data-lake" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Warehouse vs Data Lake</h4>
+
+<p>This is essentially ETL vs ELT. Data warehousing has existed for a long time. It uses structured data, relational and clean in the order of Terabytes. Business Analysts use data warehouses for specific use-cases like BI, reporting and batch processing. Data Lakes came about later taking into account the fact that businesses wanted data to be made immediately useful, as soon as it is available. So datalakes can have unstructured, semi-structured or structured data to the order of even Petabytes. The use cases are for streaming analytics, machine learning and AI.</p>
+
+<p>E=Extract, T=Transform, L=Load. ETL is for small amounts of data or <em>Schema on Write</em> approach - a schema is defined, the relationshipa are clearly defined and then the data is written. ELT on the other hand is a <em>Schema on Read</em> approach where data is written first and we worry about schema when reading data. This approach provides support for data lakes.</p>
+
+<h3 id="provision-datalake-and-datawarehousing-with-terraform-on-google-cloud-platform">
+<a class="anchor" href="#provision-datalake-and-datawarehousing-with-terraform-on-google-cloud-platform" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Provision datalake and datawarehousing with Terraform on Google Cloud Platform</strong>
+</h3>
+
+<p>The objective of the homework is to provision a datalake and a datawarehouse on Google Cloud Platform using Terraform.</p>
+
+<p>First, on the google cloud platform (300$ free credits), it is necessary to setup</p>
+<ol>
+  <li>A new goole cloud project (and note down its project ID)</li>
+  <li>A new service account (through which to access the services provided by google cloud) and download this account’s credentials as a json file and</li>
+  <li>Set the <code class="language-plaintext highlighter-rouge">GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to this location<br>
+<code class="language-plaintext highlighter-rouge">$ export GOOGLE_APPLICATION_CREDENTIALS="&lt;path/to/your/service-account-authkeys&gt;.json"</code>
+</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">$ cd /mnt/Projects/data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp/terraform</code></p>
+
+<p>Here, we have two files <code class="language-plaintext highlighter-rouge">main.tf</code> and <code class="language-plaintext highlighter-rouge">variables.tf</code>. In <code class="language-plaintext highlighter-rouge">variables.tf</code>, we can set the google cloud project ID from the previous step</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ terraform init</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Reusing previous version of hashicorp/google from the dependency lock file
+- Using previously-installed hashicorp/google v4.8.0
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">$ terraform plan</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # google_bigquery_dataset.dataset will be created
+  + resource "google_bigquery_dataset" "dataset" {
+      + creation_time              = (known after apply)
+      + dataset_id                 = "trips_data_all"
+      + delete_contents_on_destroy = false
+      + etag                       = (known after apply)
+      + id                         = (known after apply)
+      + last_modified_time         = (known after apply)
+      + location                   = "europe-west6"
+      + project                    = "fast-pagoda-339723"
+      + self_link                  = (known after apply)
+
+      + access {
+          + domain         = (known after apply)
+          + group_by_email = (known after apply)
+          + role           = (known after apply)
+          + special_group  = (known after apply)
+          + user_by_email  = (known after apply)
+
+          + view {
+              + dataset_id = (known after apply)
+              + project_id = (known after apply)
+              + table_id   = (known after apply)
+            }
+        }
+    }
+
+  # google_storage_bucket.data-lake-bucket will be created
+  + resource "google_storage_bucket" "data-lake-bucket" {
+      + force_destroy               = true
+      + id                          = (known after apply)
+      + location                    = "EUROPE-WEST6"
+      + name                        = "dtc_data_lake_fast-pagoda-339723"
+      + project                     = (known after apply)
+      + self_link                   = (known after apply)
+      + storage_class               = "STANDARD"
+      + uniform_bucket_level_access = true
+      + url                         = (known after apply)
+
+      + lifecycle_rule {
+          + action {
+              + type = "Delete"
+            }
+
+          + condition {
+              + age                   = 30
+              + matches_storage_class = []
+              + with_state            = (known after apply)
+            }
+        }
+
+      + versioning {
+          + enabled = true
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">$ terraform apply</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # google_bigquery_dataset.dataset will be created
+  + resource "google_bigquery_dataset" "dataset" {
+      + creation_time              = (known after apply)
+      + dataset_id                 = "trips_data_all"
+      + delete_contents_on_destroy = false
+      + etag                       = (known after apply)
+      + id                         = (known after apply)
+      + last_modified_time         = (known after apply)
+      + location                   = "europe-west6"
+      + project                    = "fast-pagoda-339723"
+      + self_link                  = (known after apply)
+
+      + access {
+          + domain         = (known after apply)
+          + group_by_email = (known after apply)
+          + role           = (known after apply)
+          + special_group  = (known after apply)
+          + user_by_email  = (known after apply)
+
+          + view {
+              + dataset_id = (known after apply)
+              + project_id = (known after apply)
+              + table_id   = (known after apply)
+            }
+        }
+    }
+
+  # google_storage_bucket.data-lake-bucket will be created
+  + resource "google_storage_bucket" "data-lake-bucket" {
+      + force_destroy               = true
+      + id                          = (known after apply)
+      + location                    = "EUROPE-WEST6"
+      + name                        = "dtc_data_lake_fast-pagoda-339723"
+      + project                     = (known after apply)
+      + self_link                   = (known after apply)
+      + storage_class               = "STANDARD"
+      + uniform_bucket_level_access = true
+      + url                         = (known after apply)
+
+      + lifecycle_rule {
+          + action {
+              + type = "Delete"
+            }
+
+          + condition {
+              + age                   = 30
+              + matches_storage_class = []
+              + with_state            = (known after apply)
+            }
+        }
+
+      + versioning {
+          + enabled = true
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+google_bigquery_dataset.dataset: Creating...
+google_storage_bucket.data-lake-bucket: Creating...
+google_storage_bucket.data-lake-bucket: Creation complete after 1s [id=dtc_data_lake_fast-pagoda-339723]
+google_bigquery_dataset.dataset: Creation complete after 1s [id=projects/fast-pagoda-339723/datasets/trips_data_all]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">$ terraform destroy</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>google_storage_bucket.data-lake-bucket: Refreshing state... [id=dtc_data_lake_fast-pagoda-339723]
+google_bigquery_dataset.dataset: Refreshing state... [id=projects/fast-pagoda-339723/datasets/trips_data_all]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # google_bigquery_dataset.dataset will be destroyed
+  - resource "google_bigquery_dataset" "dataset" {
+      - creation_time                   = 1643547397011 -&gt; null
+      - dataset_id                      = "trips_data_all" -&gt; null
+      - default_partition_expiration_ms = 0 -&gt; null
+      - default_table_expiration_ms     = 0 -&gt; null
+      - delete_contents_on_destroy      = false -&gt; null
+      - etag                            = "uSEBYtpaZBci9jzHBKd49A==" -&gt; null
+      - id                              = "projects/fast-pagoda-339723/datasets/trips_data_all" -&gt; null
+      - labels                          = {} -&gt; null
+      - last_modified_time              = 1643547397011 -&gt; null
+      - location                        = "europe-west6" -&gt; null
+      - project                         = "fast-pagoda-339723" -&gt; null
+      - self_link                       = "https://bigquery.googleapis.com/bigquery/v2/projects/fast-pagoda-339723/datasets/trips_data_all" -&gt; null
+
+      - access {
+          - role          = "OWNER" -&gt; null
+          - user_by_email = "data-engineer-service-account@fast-pagoda-339723.iam.gserviceaccount.com" -&gt; null
+        }
+      - access {
+          - role          = "OWNER" -&gt; null
+          - special_group = "projectOwners" -&gt; null
+        }
+      - access {
+          - role          = "READER" -&gt; null
+          - special_group = "projectReaders" -&gt; null
+        }
+      - access {
+          - role          = "WRITER" -&gt; null
+          - special_group = "projectWriters" -&gt; null
+        }
+    }
+
+  # google_storage_bucket.data-lake-bucket will be destroyed
+  - resource "google_storage_bucket" "data-lake-bucket" {
+      - default_event_based_hold    = false -&gt; null
+      - force_destroy               = true -&gt; null
+      - id                          = "dtc_data_lake_fast-pagoda-339723" -&gt; null
+      - labels                      = {} -&gt; null
+      - location                    = "EUROPE-WEST6" -&gt; null
+      - name                        = "dtc_data_lake_fast-pagoda-339723" -&gt; null
+      - project                     = "fast-pagoda-339723" -&gt; null
+      - requester_pays              = false -&gt; null
+      - self_link                   = "https://www.googleapis.com/storage/v1/b/dtc_data_lake_fast-pagoda-339723" -&gt; null
+      - storage_class               = "STANDARD" -&gt; null
+      - uniform_bucket_level_access = true -&gt; null
+      - url                         = "gs://dtc_data_lake_fast-pagoda-339723" -&gt; null
+
+      - lifecycle_rule {
+          - action {
+              - type = "Delete" -&gt; null
+            }
+
+          - condition {
+              - age                        = 30 -&gt; null
+              - days_since_custom_time     = 0 -&gt; null
+              - days_since_noncurrent_time = 0 -&gt; null
+              - matches_storage_class      = [] -&gt; null
+              - num_newer_versions         = 0 -&gt; null
+              - with_state                 = "ANY" -&gt; null
+            }
+        }
+
+      - versioning {
+          - enabled = true -&gt; null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 2 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+google_storage_bucket.data-lake-bucket: Destroying... [id=dtc_data_lake_fast-pagoda-339723]
+google_bigquery_dataset.dataset: Destroying... [id=projects/fast-pagoda-339723/datasets/trips_data_all]
+google_storage_bucket.data-lake-bucket: Destruction complete after 1s
+google_bigquery_dataset.dataset: Destruction complete after 1s
+
+Destroy complete! Resources: 2 destroyed.
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/blog/courses/data%20engineering/2022/01/29/data-engineering-zoomcamp.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Blog of iamthedataguy.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastaimldata" target="_blank" title="fastaimldata"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/iamthedataguy" target="_blank" title="iamthedataguy"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
